@@ -1,0 +1,141 @@
+/* ===== RESET CSS ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+button {
+    font-family: var(--fuente-cuerpo);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+    /* Ojo: recuerda poner un estilo :focus tú mismo por accesibilidad */
+    border: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+nav a {
+    font-family: var(--fuente-cuerpo);
+    text-decoration: none;
+}
+
+
+:root {
+    --color-principal: #FFD60A;
+    --color-secundario: #1F1F1F;
+    --color-blanco: #ffffff;
+    --color-acento: #FFE566;
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Inter', sans-serif;
+}
+
+/* ===== NAVEGACIÓN ===== */
+
+header {
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 1px solid #c5c5c552;
+    padding: 16px;
+}
+
+.logo-chic {
+    font-family: var(--fuente-titulos);
+    color: var(--color-secundario);
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.logo-chic span {
+    color: var(--color-principal);
+    font-size: 2.2rem;
+    line-height: 0;
+    margin-left: 2px;
+}
+
+nav {
+    .menu-principal {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        li a {
+            color: var(--color-secundario);
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        li a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            left: 0;
+            bottom: -5px;
+            height: 3px;
+            background-color: var(--color-principal);
+            transition: width 0.3s ease;
+        }
+
+        li a:hover::after {
+            width: 100%;
+        }
+
+        li a:hover {
+            color: var(--color-principal);
+        }
+    }
+}
