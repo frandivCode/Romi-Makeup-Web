@@ -16,10 +16,10 @@
     <meta property="og:url" content="https://www.[tu-dominio].com/" /> <!-- Agregar la url del netlify -->
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://imgur.com/a/SyiM7Na" />
-    <link rel="icon" href="./favicon/android-chrome-512x512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,10 +37,10 @@
         </a>
         <nav>
             <ul class="menu-principal">
-                <li><a href="#hero">¿Quién Soy?</a></li>
+                <li><a href="#sobre-mi">¿Quién Soy?</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#galeria">Galería</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
 
@@ -49,7 +49,6 @@
                         <li><a href="#hero" onclick="toggleMenu()">¿Quién Soy?</a></li>
                         <li><a href="#servicios" onclick="toggleMenu()">Servicios</a></li>
                         <li><a href="#galeria" onclick="toggleMenu()">Galería</a></li>
-                        <li><a href="#testimonios" onclick="toggleMenu()">Testimonios</a></li>
                         <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
                     </div> -->
         </nav>
@@ -71,38 +70,17 @@
                             que ya tienes.</span>
                     </p>
 
-                    <a href="#contacto" class="btn-cta" aria-label="Reservar cita">Reservar cita</a>
+                    <a href="#contacto" class="btn-cta" aria-label="Reservar cita">Agendar una cita<ion-icon
+                            name="arrow-down-outline"></ion-icon></a>
                 </div>
-
-                <div class="hero-image">
-                    <figure>
-                        <img src="./img/mujer-makeup.jpg" alt="Chica maquillada por Romina Zapata">
-                    </figure>
-                </div>
-
             </div>
         </div>
     </section>
     <main>
-        <section id="servicios" class="bg-grey">
-            <div class="container">
-                <div class="content-services">
-                    <header class="services-header">
-                        <h2>Mis Servicios</h2>
-                        <p>Experiencias diseñadas para realzar tu estilo</p>
-                    </header>
-                </div>
-
-                <div id="services-container" class="services-grid">
-                </div>
-            </div>
-        </section>
-
         <section id="sobre-mi" class="bg-light">
             <div class="container">
                 <div class="about-layout">
                     <div class="about-image">
-                        <!-- <img src="./img/blob-haikei.svg" class="blob-absolute"> -->
                         <figure>
                             <img src="./img/img-romi.jpg" alt="Romina Zapata Maquilladora">
                         </figure>
@@ -116,8 +94,98 @@
                             Me especializo en novias porque amo ser parte de ese momento...
                             Utilizo productos de alta gama como Dior y MAC para asegurar...
                         </p>
+                    </div>
 
-                        <p class="signature">Romi Zapata.</p>
+                </div>
+            </div>
+        </section>
+        <section id="servicios" class="bg-grey">
+            <div class="container">
+                <div class="content-services">
+                    <header class="services-header">
+                        <h2>Mis Servicios</h2>
+                        <p>Experiencias diseñadas para realzar tu estilo</p>
+                    </header>
+                </div>
+
+                <div id="services-container" class="services-grid">
+                </div>
+            </div>
+        </section>
+        <section id="faq" class="bg-light">
+            <div class="container">
+                <header class="section-header-center">
+                    <h2>Preguntas Frecuentes</h2>
+                </header>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>¿Con cuánta anticipación debo reservar para mi boda?</h3>
+                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Para novias, recomiendo reservar con al menos <strong>3 a 6 meses de
+                                    anticipación</strong>,
+                                especialmente si te casas en temporada alta (septiembre-marzo). Así aseguramos tu fecha
+                                y
+                                planificamos la prueba de maquillaje con tranquilidad.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>¿Qué marcas de productos utilizas?</h3>
+                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Mi maletín es una mezcla de alta gama y profesional. Trabajo principalmente con
+                                <strong>MAC,
+                                    Dior, Estée Lauder, Anastasia Beverly Hills y Kryolan</strong>. Todos los productos
+                                son
+                                hipoalergénicos, de larga duración y aptos para fotografía HD.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>¿Realizas pruebas de maquillaje?</h3>
+                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p>¡Sí, es fundamental! La prueba está incluida en el Pack de Novias y se realiza
+                                aproximadamente un
+                                mes antes del evento. Allí diseñamos el look juntas para que ese día te sientas segura,
+                                relajada
+                                y seas 100% tú misma.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>¿Vas a domicilio o atiendes en estudio?</h3>
+                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Para <strong>Novias y grupos</strong> (madrinas, quinceañeras), voy a domicilio o al
+                                hotel para
+                                tu comodidad. Para <strong>Maquillaje Social individual</strong>, atiendo en mi estudio
+                                en [Tu
+                                Ubicación], donde tengo la iluminación perfecta para dejarte increíble.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>¿Cómo debo preparar mi piel antes de la cita?</h3>
+                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Lo ideal es que vengas con la cara limpia y bien hidratada. Si es posible, realiza una
+                                exfoliación suave la noche anterior. ¡No te preocupes por el resto! Yo prepararé tu piel
+                                con
+                                productos específicos (skincare) antes de empezar a maquillar.</p>
+                        </div>
                     </div>
 
                 </div>
@@ -130,38 +198,57 @@
                     <p>Desde la delicadeza de una novia hasta la precisión del nail art. Un recorrido visual por los
                         acabados impecables y los
                         detalles que definen mi firma en cada servicio.</p>
-                    <div class="line-below"></div>
                 </div>
 
                 <div class="grid-mansonry">
                     <figure class="grid-img one">
                         <img src="https://plus.unsplash.com/premium_photo-1661326352695-6cbe1ff74ee9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
-                        <a href="#" class="prueba-btn">Ver Look</a>
+                        <div class="inset-button-look">
+                            <a href="#" class="btn-look">Ver Look</a>
+                        </div>
                     </figure>
                     <figure class="grid-img two">
                         <img src="https://plus.unsplash.com/premium_photo-1661326352695-6cbe1ff74ee9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
+                        <div class="inset-button-look">
+                            <a href="#" class="btn-look">Ver Look</a>
+                        </div>
                     </figure>
                     <figure class="grid-img three">
                         <img src="https://plus.unsplash.com/premium_photo-1661326352695-6cbe1ff74ee9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
+                        <div class="inset-button-look">
+                            <a href="#" class="btn-look">Ver Look</a>
+                        </div>
                     </figure>
                     <figure class="grid-img four">
                         <img src="https://plus.unsplash.com/premium_photo-1661326352695-6cbe1ff74ee9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
+                        <div class="inset-button-look">
+                            <a href="#" class="btn-look">Ver Look</a>
+                        </div>
                     </figure>
                     <figure class="grid-img five">
                         <img src="https://plus.unsplash.com/premium_photo-1661326352695-6cbe1ff74ee9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
+                        <div class="inset-button-look">
+                            <a href="#" class="btn-look">Ver Look</a>
+                        </div>
                     </figure>
                     <figure class="grid-img six">
                         <img src="https://plus.unsplash.com/premium_photo-1661326352695-6cbe1ff74ee9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
+                        <div class="inset-button-look">
+                            <a href="#" class="btn-look">Ver Look</a>
+                        </div>
                     </figure>
                     <figure class="grid-img seven">
                         <img src="https://plus.unsplash.com/premium_photo-1661326352695-6cbe1ff74ee9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
+                        <div class="inset-button-look">
+                            <a href="#" class="btn-look">Ver Look</a>
+                        </div>
                     </figure>
                 </div>
             </div>
@@ -169,17 +256,61 @@
     </main>
 
 
-    <!-- <section id="reservar" class="bg-accent">
+    <section id="contacto" class="bg-light">
         <div class="container">
-            <h2>¿Lista para brillar?</h2>
-            <p>Agenda tu fecha hoy mismo.</p>
+            <div class="text-contact">
+                <h2>Contacto</h2>
+                <p class="highlight-contact">¿Lista para brillar? ¡Agenda tu cita hoy mismo!</p>
+            </div>
+            <div class="container-social">
+                <div class="social-content">
+                    <a href="https://www.instagram.com/romizapata.makeup/?fbclid=IwY2xjawOu4NRleHRuA2FlbQIxMABicmlkETFXM255ZWdJN09JRkRoNHNsc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHvS06PXO4zcDnroOY6SvZCU-eA3G1aHIdDV5maTK3uj46LuRorMQ77aa9yLd_aem_bEnFbXFpxtNFJJeJ2jGzOA"
+                        target="_blank" class="social-btn"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <p>Instagram</p>
+                    <a href="https://www.instagram.com/romizapata.makeup/?fbclid=IwY2xjawOu4NRleHRuA2FlbQIxMABicmlkETFXM255ZWdJN09JRkRoNHNsc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHvS06PXO4zcDnroOY6SvZCU-eA3G1aHIdDV5maTK3uj46LuRorMQ77aa9yLd_aem_bEnFbXFpxtNFJJeJ2jGzOA"
+                        target="_blank">romizapata.makeup</a>
+                </div>
+                <div class="social-content">
+                    <a href="https://www.facebook.com/rominazapatamaquillaje" target="_blank"
+                        class="social-btn"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <p>Facebook</p>
+                    <a href="https://www.facebook.com/rominazapatamaquillaje" target="_blank">Romina Zapata Makeup</a>
+                </div>
+                <div class="social-content">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Zapata.rb@hotmail.com&su=Consulta%20Web&body=Hola%20Romi..."
+                        target="_blank" class="social-btn"><ion-icon name="mail-outline"></ion-icon></a>
+                    <p>Email</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Zapata.rb@hotmail.com&su=Consulta%20Web&body=Hola%20Romi..."
+                        target="_blank">Zapata.rb@hotmail.com</a>
+                </div>
+            </div>
+            <div class="cta-cita">
+                <a href="https://wa.me/3549592986?text=¡Hola,%20quiero%20agendar%20una%20cita!" target="_blank"
+                    class="btn-cta">
+                    Agendar por WhatsApp
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+            </div>
         </div>
     </section>
 
     <footer class="bg-dark">
         <div class="container">
         </div>
-    </footer> -->
+    </footer>
+
+    <!-- MODALES -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+
+        <button class="lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Look en detalle">
+        </div>
+
+        <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
+    </div>
     <div id="modal-overlay" class="modal-overlay">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -224,6 +355,8 @@
             </div>
         </div>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="main.js"></script>
 </body>
 

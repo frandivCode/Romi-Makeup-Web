@@ -103,3 +103,92 @@ window.onclick = function (event) {
         }
     }
 }
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const gridItems = document.querySelectorAll('.grid-mansonry .grid-img');
+
+
+let currentIndex = 0;
+let imagesList = [];
+
+gridItems.forEach((item, index) => {
+    const img = item.querySelector('img');
+
+    if (img) {
+        imagesList.push(img.src);
+    }
+
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        openLightbox(index);
+    });
+});
+
+function openLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = imagesList[currentIndex];
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function changeImage(direction) {
+    currentIndex += direction;
+
+    if (currentIndex >= imagesList.length) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = imagesList.length - 1;
+    }
+
+    lightboxImg.style.opacity = 0;
+    setTimeout(() => {
+        lightboxImg.src = imagesList[currentIndex];
+        lightboxImg.style.opacity = 1;
+    }, 200);
+}
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') changeImage(1);
+    if (e.key === 'ArrowLeft') changeImage(-1);
+});
+
+
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        // 1. Identificar si el que clickeé ya estaba abierto
+        const isAlreadyActive = header.classList.contains('active');
+
+        // 2. CERRAR TODOS (Lógica de "Exclusivo")
+        // Recorremos todos los headers para quitarles la clase active y cerrar su contenido
+        accordionHeaders.forEach(otherHeader => {
+            otherHeader.classList.remove('active');
+            otherHeader.nextElementSibling.style.maxHeight = null; // Colapsa el contenido
+        });
+
+        // 3. Si el que clickeé NO estaba abierto, lo abrimos ahora
+        if (!isAlreadyActive) {
+            header.classList.add('active');
+
+            // Truco para animar la altura automáticamente (height: auto no anima)
+            const content = header.nextElementSibling;
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
