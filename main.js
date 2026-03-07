@@ -43,21 +43,21 @@ const services = [
         title: "Maquillaje Social",
         shortDesc: "Para bodas, graduaciones y eventos especiales.",
         fullDesc: "Servicio completo de maquillaje para eventos. Incluye preparación de la piel (skincare express), pruebas de alergia, aplicación de pestañas postizas y fijación de larga duración (24hs). Utilizamos productos de alta gama (MAC, Dior, Estée Lauder) para asegurar un acabado fotográfico impecable.",
-        image: "https://plus.unsplash.com/premium_photo-1661326352695-6cbe1ff74ee9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "./img/maquillaje-social.webp"
     },
     {
         id: 2,
         title: "Clases de Automaquillaje",
         shortDesc: "Aprende técnicas profesionales para realzar tus mejores rasgos.",
         fullDesc: "Clases personalizadas de 3 horas donde analizamos tu neceser, descartamos productos vencidos y te enseño a usar lo que ya tienes. Aprenderás: preparación de piel, corrección de imperfecciones, visagismo básico y transformación de maquillaje de día a noche.",
-        image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "./img/clases-automaquillaje.webp"
     },
     {
         id: 3,
         title: "Servicio de Uñas",
         shortDesc: "Soft gel, kapping y esmaltado semipermanente.",
         fullDesc: "Cuidado integral de tus manos. Realizamos manicuría rusa combinada, nivelación de la placa ungueal y esmaltado con productos hipoalergénicos. Diseños a mano alzada y nail art minimalista. Tratamiento de hidratación de cutículas incluido.",
-        image: "https://images.unsplash.com/photo-1727468939344-44929b044076?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "./img/img-romi.webp"
     }
 ];
 
@@ -172,21 +172,15 @@ const accordionHeaders = document.querySelectorAll('.accordion-header');
 
 accordionHeaders.forEach(header => {
     header.addEventListener('click', () => {
-        // 1. Identificar si el que clickeé ya estaba abierto
         const isAlreadyActive = header.classList.contains('active');
 
-        // 2. CERRAR TODOS (Lógica de "Exclusivo")
-        // Recorremos todos los headers para quitarles la clase active y cerrar su contenido
         accordionHeaders.forEach(otherHeader => {
             otherHeader.classList.remove('active');
-            otherHeader.nextElementSibling.style.maxHeight = null; // Colapsa el contenido
+            otherHeader.nextElementSibling.style.maxHeight = null;
         });
 
-        // 3. Si el que clickeé NO estaba abierto, lo abrimos ahora
         if (!isAlreadyActive) {
             header.classList.add('active');
-
-            // Truco para animar la altura automáticamente (height: auto no anima)
             const content = header.nextElementSibling;
             content.style.maxHeight = content.scrollHeight + "px";
         }
