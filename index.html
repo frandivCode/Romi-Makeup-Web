@@ -32,10 +32,11 @@
 
 <body>
     <header class="header-nav" id="inicio">
-        <a href="#" class="logo-chic">
-            Romi Makeup<span>.</span>
+        <a href="#" aria-label="Ir al inicio">
+            <img class="logo" src="./img/logo-page.png" alt="Logo de Romina Zapata" fetchpriority="high"
+                decoding="sync">
         </a>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul class="menu-principal">
                 <li><a href="#sobre-mi">¿Quién Soy?</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -43,245 +44,240 @@
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-
-            <!-- Mobile Navigation -->
-            <!--        <div id="menu-secundario">
-                        <li><a href="#hero" onclick="toggleMenu()">¿Quién Soy?</a></li>
-                        <li><a href="#servicios" onclick="toggleMenu()">Servicios</a></li>
-                        <li><a href="#galeria" onclick="toggleMenu()">Galería</a></li>
-                        <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
-                    </div> -->
         </nav>
     </header>
 
-    <section id="hero" class="bg-light hero-section">
-        <div class="container">
-
-            <div class="hero-layout">
-
-                <div class="hero-text">
-                    <span class="tab-work">Professional Makeup Artist</span>
-                    <h1 class="hero-title">Impacta desde la <span class="highlight">primera mirada</span></h1>
-
-                    <p class="hero-paragraph">
-                        Hola, soy Romi. <span class="fw-text">Maquillaje Social & Nail Art.</span> Mi misión no es
-                        cambiarte, <span class="fw-text">es
-                            potenciar la actitud
-                            que ya tienes.</span>
-                    </p>
-
-                    <a href="#contacto" class="btn-cta" aria-label="Reservar cita">Agendar una cita<ion-icon
-                            name="arrow-down-outline"></ion-icon></a>
+    <main>
+        <section id="hero" class="bg-light hero-section" aria-labelledby="titulo-hero">
+            <div class="container">
+                <div class="hero-layout">
+                    <div class="hero-text">
+                        <span class="tab-work">Professional Makeup Artist</span>
+                        <h1 id="titulo-hero" class="hero-title">Impacta desde la <span class="highlight">primera
+                                mirada</span></h1>
+                        <p class="hero-paragraph">
+                            Hola, soy Romi. <span class="fw-text">Maquillaje Social & Nail Art.</span> Mi misión no es
+                            cambiarte, <span class="fw-text">es potenciar la actitud que ya tienes.</span>
+                        </p>
+                        <a href="#contacto" class="btn-cta" aria-label="Agendar una cita con Romina">
+                            Agendar una cita<ion-icon name="arrow-down-outline" aria-hidden="true"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="hero-image">
+                        <figure>
+                            <img class="img-hero" src="./img/work-three.webp"
+                                alt="Modelo con maquillaje profesional realizado por Romina Zapata" fetchpriority="high"
+                                decoding="sync">
+                        </figure>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <main>
-        <section id="sobre-mi" class="bg-light">
+        </section>
+
+        <section id="sobre-mi" class="bg-light" aria-labelledby="titulo-sobre-mi">
             <div class="container">
                 <div class="about-layout">
                     <div class="about-image">
-                        <figure>
-                            <img src="./img/img-romi.webp" alt="Romina Zapata Maquilladora">
+                        <figure style="background-image: url('./img/img-romi.webp')">
+                            <img src="./img/img-romi.webp" alt="Romina Zapata Maquilladora en su estudio" loading="lazy"
+                                decoding="async">
                         </figure>
                     </div>
-
                     <div class="about-text">
                         <span class="tab-me">La Artista detrás del pincel</span>
-                        <h2>Más que maquillaje, es confianza.</h2>
+                        <h2 id="titulo-sobre-mi">Más que maquillaje, es confianza.</h2>
                         <p>
                             Hola, soy Romina Zapata. Mi pasión por el maquillaje comenzó hace X años...
                             Me especializo en novias porque amo ser parte de ese momento...
                             Utilizo productos de alta gama como Dior y MAC para asegurar...
                         </p>
                     </div>
-
                 </div>
             </div>
         </section>
-        <section id="servicios" class="bg-grey">
+
+        <section id="servicios" class="bg-grey" aria-labelledby="titulo-servicios">
             <div class="container">
                 <div class="content-services">
                     <header class="services-header">
-                        <h2>Mis Servicios</h2>
+                        <h2 id="titulo-servicios">Mis Servicios</h2>
                         <p>Experiencias diseñadas para realzar tu estilo</p>
                     </header>
                 </div>
-
                 <div id="services-container" class="services-grid">
                 </div>
             </div>
         </section>
-        <section id="faq" class="bg-light">
+
+        <section id="faq" class="bg-light" aria-labelledby="titulo-faq">
             <div class="container">
                 <header class="section-header-center">
-                    <h2>Preguntas Frecuentes</h2>
+                    <h2 id="titulo-faq">Preguntas Frecuentes</h2>
                 </header>
                 <div class="accordion">
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button class="accordion-header" aria-expanded="false">
                             <h3>¿Con cuánta anticipación debo reservar para mi boda?</h3>
-                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                            <ion-icon name="chevron-down-outline" class="icon" aria-hidden="true"></ion-icon>
                         </button>
                         <div class="accordion-content">
                             <p>Para novias, recomiendo reservar con al menos <strong>3 a 6 meses de
-                                    anticipación</strong>,
-                                especialmente si te casas en temporada alta (septiembre-marzo). Así aseguramos tu fecha
-                                y
-                                planificamos la prueba de maquillaje con tranquilidad.</p>
+                                    anticipación</strong>, especialmente si te casas en temporada alta
+                                (septiembre-marzo). Así aseguramos tu fecha y planificamos la prueba de maquillaje con
+                                tranquilidad.</p>
                         </div>
                     </div>
 
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button class="accordion-header" aria-expanded="false">
                             <h3>¿Qué marcas de productos utilizas?</h3>
-                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                            <ion-icon name="chevron-down-outline" class="icon" aria-hidden="true"></ion-icon>
                         </button>
                         <div class="accordion-content">
                             <p>Mi maletín es una mezcla de alta gama y profesional. Trabajo principalmente con
-                                <strong>MAC,
-                                    Dior, Estée Lauder, Anastasia Beverly Hills y Kryolan</strong>. Todos los productos
-                                son
-                                hipoalergénicos, de larga duración y aptos para fotografía HD.
+                                <strong>MAC, Dior, Estée Lauder, Anastasia Beverly Hills y Kryolan</strong>. Todos los
+                                productos son hipoalergénicos, de larga duración y aptos para fotografía HD.
                             </p>
                         </div>
                     </div>
 
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button class="accordion-header" aria-expanded="false">
                             <h3>¿Realizas pruebas de maquillaje?</h3>
-                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                            <ion-icon name="chevron-down-outline" class="icon" aria-hidden="true"></ion-icon>
                         </button>
                         <div class="accordion-content">
                             <p>¡Sí, es fundamental! La prueba está incluida en el Pack de Novias y se realiza
-                                aproximadamente un
-                                mes antes del evento. Allí diseñamos el look juntas para que ese día te sientas segura,
-                                relajada
-                                y seas 100% tú misma.</p>
+                                aproximadamente un mes antes del evento. Allí diseñamos el look juntas para que ese día
+                                te sientas segura, relajada y seas 100% tú misma.</p>
                         </div>
                     </div>
 
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button class="accordion-header" aria-expanded="false">
                             <h3>¿Vas a domicilio o atiendes en estudio?</h3>
-                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                            <ion-icon name="chevron-down-outline" class="icon" aria-hidden="true"></ion-icon>
                         </button>
                         <div class="accordion-content">
                             <p>Para <strong>Novias y grupos</strong> (madrinas, quinceañeras), voy a domicilio o al
-                                hotel para
-                                tu comodidad. Para <strong>Maquillaje Social individual</strong>, atiendo en mi estudio
-                                en [Tu
-                                Ubicación], donde tengo la iluminación perfecta para dejarte increíble.</p>
+                                hotel para tu comodidad. Para <strong>Maquillaje Social individual</strong>, atiendo en
+                                mi estudio en [Tu Ubicación], donde tengo la iluminación perfecta para dejarte
+                                increíble.</p>
                         </div>
                     </div>
 
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button class="accordion-header" aria-expanded="false">
                             <h3>¿Cómo debo preparar mi piel antes de la cita?</h3>
-                            <ion-icon name="chevron-down-outline" class="icon"></ion-icon>
+                            <ion-icon name="chevron-down-outline" class="icon" aria-hidden="true"></ion-icon>
                         </button>
                         <div class="accordion-content">
                             <p>Lo ideal es que vengas con la cara limpia y bien hidratada. Si es posible, realiza una
                                 exfoliación suave la noche anterior. ¡No te preocupes por el resto! Yo prepararé tu piel
-                                con
-                                productos específicos (skincare) antes de empezar a maquillar.</p>
+                                con productos específicos (skincare) antes de empezar a maquillar.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-        <section id="galeria" class="bg-dark">
+
+        <section id="galeria" class="bg-dark" aria-labelledby="titulo-galeria">
             <div class="container">
-                <div class="center-gallery">
-                    <h2>El arte de expresar quién eres</h2>
+                <header class="center-gallery">
+                    <h2 id="titulo-galeria">El arte de expresar quién eres</h2>
                     <p>Desde la delicadeza de una novia hasta la precisión del nail art. Un recorrido visual por los
-                        acabados impecables y los
-                        detalles que definen mi firma en cada servicio.</p>
-                </div>
+                        acabados impecables y los detalles que definen mi firma en cada servicio.</p>
+                </header>
 
                 <div class="grid-mansonry">
                     <figure class="grid-img one">
-                        <img src="./img/work-one.webp" alt="">
-                        <div class="inset-button-look">
-                            <a href="#" class="btn-look">Ver Look</a>
-                        </div>
+                        <img src="./img/work-one.webp" alt="Trabajo de maquillaje profesional 1" loading="lazy"
+                            decoding="async">
+                        <figcaption class="inset-button-look">
+                            <a href="#" class="btn-look" aria-label="Ver detalles del look 1">Ver Look</a>
+                        </figcaption>
                     </figure>
                     <figure class="grid-img two">
-                        <img src="./img/work-two.JPG" alt="">
-                        <div class="inset-button-look">
-                            <a href="#" class="btn-look">Ver Look</a>
-                        </div>
+                        <img src="./img/work-two.webp" alt="Trabajo de maquillaje profesional 2" loading="lazy"
+                            decoding="async">
+                        <figcaption class="inset-button-look">
+                            <a href="#" class="btn-look" aria-label="Ver detalles del look 2">Ver Look</a>
+                        </figcaption>
                     </figure>
                     <figure class="grid-img three">
-                        <img src="./img/work-three.webp" alt="">
-                        <div class="inset-button-look">
-                            <a href="#" class="btn-look">Ver Look</a>
-                        </div>
+                        <img src="./img/work-three.webp" alt="Trabajo de maquillaje profesional 3" loading="lazy"
+                            decoding="async">
+                        <figcaption class="inset-button-look">
+                            <a href="#" class="btn-look" aria-label="Ver detalles del look 3">Ver Look</a>
+                        </figcaption>
                     </figure>
                     <figure class="grid-img four">
-                        <img src="./img/work-four.webp" alt="">
-                        <div class="inset-button-look">
-                            <a href="#" class="btn-look">Ver Look</a>
-                        </div>
+                        <img src="./img/work-four.webp" alt="Trabajo de maquillaje profesional 4" loading="lazy"
+                            decoding="async">
+                        <figcaption class="inset-button-look">
+                            <a href="#" class="btn-look" aria-label="Ver detalles del look 4">Ver Look</a>
+                        </figcaption>
                     </figure>
                     <figure class="grid-img five">
-                        <img src="./img/work-five.webp" alt="">
-                        <div class="inset-button-look">
-                            <a href="#" class="btn-look">Ver Look</a>
-                        </div>
+                        <img src="./img/work-five.JPG" alt="Trabajo de maquillaje profesional 5" loading="lazy"
+                            decoding="async">
+                        <figcaption class="inset-button-look">
+                            <a href="#" class="btn-look" aria-label="Ver detalles del look 5">Ver Look</a>
+                        </figcaption>
                     </figure>
                     <figure class="grid-img six">
-                        <img src="./img/work-six.webp" alt="">
-                        <div class="inset-button-look">
-                            <a href="#" class="btn-look">Ver Look</a>
-                        </div>
+                        <img src="./img/work-six.webp" alt="Trabajo de maquillaje profesional 6" loading="lazy"
+                            decoding="async">
+                        <figcaption class="inset-button-look">
+                            <a href="#" class="btn-look" aria-label="Ver detalles del look 6">Ver Look</a>
+                        </figcaption>
                     </figure>
-                    <!-- <figure class="grid-img seven">
-                        <img src="./img/work-six.webp" alt="">
-                        <div class="inset-button-look">
-                            <a href="#" class="btn-look">Ver Look</a>
-                        </div>
-                    </figure> -->
                 </div>
             </div>
         </section>
     </main>
 
-
-    <section id="contacto" class="bg-light">
+    <section id="contacto" class="bg-light" aria-labelledby="titulo-contacto">
         <div class="container">
-            <div class="text-contact">
-                <h2>Contacto</h2>
+            <header class="text-contact">
+                <h2 id="titulo-contacto">Contacto</h2>
                 <p class="highlight-contact">¿Lista para brillar? ¡Agenda tu cita hoy mismo!</p>
-            </div>
-            <div class="container-social">
+            </header>
+
+            <address class="container-social">
                 <div class="social-content">
-                    <a href="https://www.instagram.com/romizapata.makeup/?fbclid=IwY2xjawOu4NRleHRuA2FlbQIxMABicmlkETFXM255ZWdJN09JRkRoNHNsc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHvS06PXO4zcDnroOY6SvZCU-eA3G1aHIdDV5maTK3uj46LuRorMQ77aa9yLd_aem_bEnFbXFpxtNFJJeJ2jGzOA"
-                        target="_blank" class="social-btn"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.instagram.com/romizapata.makeup/..." target="_blank" rel="noopener noreferrer"
+                        class="social-btn" aria-label="Ir al perfil de Instagram">
+                        <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                    </a>
                     <p>Instagram</p>
-                    <a href="https://www.instagram.com/romizapata.makeup/?fbclid=IwY2xjawOu4NRleHRuA2FlbQIxMABicmlkETFXM255ZWdJN09JRkRoNHNsc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHvS06PXO4zcDnroOY6SvZCU-eA3G1aHIdDV5maTK3uj46LuRorMQ77aa9yLd_aem_bEnFbXFpxtNFJJeJ2jGzOA"
-                        target="_blank">romizapata.makeup</a>
+                    <a href="https://www.instagram.com/romizapata.makeup/..." target="_blank"
+                        rel="noopener noreferrer">romizapata.makeup</a>
                 </div>
                 <div class="social-content">
-                    <a href="https://www.facebook.com/rominazapatamaquillaje" target="_blank"
-                        class="social-btn"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.facebook.com/rominazapatamaquillaje" target="_blank" rel="noopener noreferrer"
+                        class="social-btn" aria-label="Ir a la página de Facebook">
+                        <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+                    </a>
                     <p>Facebook</p>
-                    <a href="https://www.facebook.com/rominazapatamaquillaje" target="_blank">Romina Zapata Makeup</a>
+                    <a href="https://www.facebook.com/rominazapatamaquillaje" target="_blank"
+                        rel="noopener noreferrer">Romina Zapata Makeup</a>
                 </div>
                 <div class="social-content">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Zapata.rb@hotmail.com&su=Consulta%20Web&body=Hola%20Romi..."
-                        target="_blank" class="social-btn"><ion-icon name="mail-outline"></ion-icon></a>
+                    <a href="https://mail.google.com/mail/..." target="_blank" rel="noopener noreferrer"
+                        class="social-btn" aria-label="Enviar un correo electrónico">
+                        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                    </a>
                     <p>Email</p>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Zapata.rb@hotmail.com&su=Consulta%20Web&body=Hola%20Romi..."
-                        target="_blank">Zapata.rb@hotmail.com</a>
+                    <a href="https://mail.google.com/mail/..." target="_blank"
+                        rel="noopener noreferrer">Zapata.rb@hotmail.com</a>
                 </div>
-            </div>
+            </address>
             <div class="cta-cita">
                 <a href="https://wa.me/3549592986?text=¡Hola,%20quiero%20agendar%20una%20cita!" target="_blank"
-                    class="btn-cta">
+                    rel="noopener noreferrer" class="btn-cta" aria-label="Contactar por WhatsApp">
                     Agendar por WhatsApp
-                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
                 </a>
             </div>
         </div>
@@ -290,78 +286,64 @@
     <footer class="bg-dark">
         <div class="container">
             <div class="container-footer">
-                <a href="#">
-                    <img src="./img/logo-page.png
-                    " alt="Logo de Romina Zapata" aria-label="Logo clickeable para recargar la página">
+                <a href="#inicio" aria-label="Volver al inicio">
+                    <img class="logo" src="./img/logo-page.png" alt="Logo de Romina Zapata" loading="lazy">
                 </a>
                 <p class="copyright">© 2025 Romi Makeup Artist.</p>
-                <div class="social-footer">
+                <nav class="social-footer" aria-label="Redes sociales del footer">
                     <a href="#">Instagram</a>
                     <a href="#">Facebook</a>
-                </div>
+                </nav>
             </div>
         </div>
     </footer>
 
-    <!-- MODALES -->
-    <div id="lightbox" class="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-
-        <button class="lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
-
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar visor">&times;</button>
+        <button class="lightbox-prev" onclick="changeImage(-1)" aria-label="Imagen anterior">&#10094;</button>
         <div class="lightbox-content">
-            <img id="lightbox-img" src="" alt="Look en detalle">
+            <img id="lightbox-img" src="" alt="Look en detalle seleccionado" loading="lazy">
         </div>
-
-        <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
+        <button class="lightbox-next" onclick="changeImage(1)" aria-label="Imagen siguiente">&#10095;</button>
     </div>
-    <div id="modal-overlay" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
 
+    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()"
+                aria-label="Cerrar información del servicio">&times;</button>
             <div class="modal-header">
-                <img id="modal-img" src="" alt="">
+                <img id="modal-img" src="" alt="" loading="lazy">
                 <div class="modal-title-overlay">
                     <h2 id="modal-title">Título del Servicio</h2>
                 </div>
             </div>
-
             <div class="modal-body">
                 <p id="modal-desc">Descripción completa aquí...</p>
             </div>
-
             <div class="modal-footer">
                 <a href="#contacto" class="btn-text" onclick="closeModal()">Consultar disponibilidad</a>
                 <div class="whatsapp-menu-container">
-                    <button class="btn-solid" onclick="toggleWhatsappMenu()">
+                    <button class="btn-solid" onclick="toggleWhatsappMenu()" aria-haspopup="menu" aria-expanded="false">
                         RESERVAR AHORA
                     </button>
-
-                    <div id="wa-menu" class="wa-dropdown">
-                        <a href="https://wa.me/3549592986?text=Hola,%20quiero%20consultar%20por%20turnos%20disponibles"
-                            target="_blank">
-                            📅 Ver Turnos Disponibles
-                        </a>
-                        <a href="https://wa.me/3549592986?text=Hola,%20quisiera%20presupuesto%20para%20Novias"
-                            target="_blank">
-                            👰 Presupuesto Novias
-                        </a>
-                        <a href="https://wa.me/3549592986?text=Hola,%20quiero%20info%20sobre%20clases%20de%20automaquillaje"
-                            target="_blank">
-                            🎓 Clases Automaquillaje
-                        </a>
-                        <a href="https://wa.me/3549592986?text=Hola,%20tengo%20una%20consulta%20general"
-                            target="_blank">
-                            💬 Otra consulta
-                        </a>
+                    <div id="wa-menu" class="wa-dropdown" role="menu">
+                        <a href="https://wa.me/3549592986..." target="_blank" rel="noopener noreferrer"
+                            role="menuitem">📅 Ver Turnos Disponibles</a>
+                        <a href="https://wa.me/3549592986..." target="_blank" rel="noopener noreferrer"
+                            role="menuitem">👰 Presupuesto Novias</a>
+                        <a href="https://wa.me/3549592986..." target="_blank" rel="noopener noreferrer"
+                            role="menuitem">🎓 Clases Automaquillaje</a>
+                        <a href="https://wa.me/3549592986..." target="_blank" rel="noopener noreferrer"
+                            role="menuitem">💬 Otra consulta</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="main.js"></script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="main.js"></script>
 </body>
 
 </html>

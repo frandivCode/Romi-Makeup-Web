@@ -66,19 +66,18 @@ const container = document.getElementById('services-container');
 function renderServices() {
     const cardsHTML = services.map(service => {
         return `
-            <article class="service-card" onclick="openModal(${service.id})">
-                <div class="card-image">
-                    <img src="${service.image}" alt="${service.title}" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>${service.title}</h3>
-                    <p>${service.shortDesc}</p>
-                    
-                    <button class="btn-card" onclick="openModal(${service.id})" arial-label="Ver detalles">
-                        Ver detalles
-                    </button>
-                </div>
-            </article>
+        <article class="service-card">
+            <figure class="card-image">
+                <img src="${service.image}" alt="Servicio de ${service.title}" loading="lazy" decoding="async">
+            </figure>
+            <div class="card-content">
+                <h3>${service.title}</h3>
+                <p>${service.shortDesc}</p>
+                <button class="btn-card" onclick="openModal(${service.id})" aria-label="Ver detalles de ${service.title}">
+                    Ver detalles
+                </button>
+            </div>
+        </article>
         `;
     }).join('');
 
