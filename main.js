@@ -8,7 +8,7 @@ function openModal(id) {
 
     if (service) {
         modalTitle.innerText = service.title;
-        modalDesc.innerText = service.fullDesc
+        modalDesc.innerText = service.fullDesc;
         modalImg.src = service.image;
         modalImg.alt = service.title;
 
@@ -18,6 +18,14 @@ function openModal(id) {
         }, 10);
 
         document.body.style.overflow = 'hidden';
+
+        const tituloServicio = service.title;
+
+        const mensajeConsultar = `Hola Romi, quiero consultar disponibilidad para el servicio de ${tituloServicio}.`;
+        document.getElementById('modal-wa-consultar').href = `https://wa.me/3549635027?text=${encodeURIComponent(mensajeConsultar)}`;
+
+        const mensajeReservar = `Hola Romi, quiero reservar el servicio de ${tituloServicio}.`;
+        document.getElementById('modal-wa-reservar').href = `https://wa.me/3549635027?text=${encodeURIComponent(mensajeReservar)}`;
     }
 }
 
@@ -107,7 +115,6 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const gridItems = document.querySelectorAll('.grid-mansonry .grid-img');
 
-
 let currentIndex = 0;
 let imagesList = [];
 
@@ -185,3 +192,13 @@ accordionHeaders.forEach(header => {
         }
     });
 });
+
+function toggleFloatingWA() {
+    const menu = document.getElementById('wa-floating-menu');
+    menu.classList.toggle('show');
+
+    const isExpanded = menu.classList.contains('show');
+    menu.setAttribute('aria-hidden', !isExpanded);
+}
+
+document.getElementById('current-year').textContent = new Date().getFullYear();
