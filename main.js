@@ -65,7 +65,7 @@ const services = [
         title: "Servicio de Uñas",
         shortDesc: "Soft gel, kapping y esmaltado semipermanente.",
         fullDesc: "Cuidado integral de tus manos. Realizamos manicuría rusa combinada, nivelación de la placa ungueal y esmaltado con productos hipoalergénicos. Diseños a mano alzada y nail art minimalista. Tratamiento de hidratación de cutículas incluido.",
-        image: "./img/img-romi.webp"
+        image: "./img/servicio-nails.webp"
     }
 ];
 
@@ -204,15 +204,13 @@ function toggleFloatingWA() {
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
 const btnMenu = document.getElementById('btn-menu');
-const navMenu = document.querySelector('nav'); // Ahora interactuamos con el <nav>
+const navMenu = document.querySelector('nav');
 const menuLinks = document.querySelectorAll('.menu-principal a');
 
-// Función central para abrir/cerrar
 function toggleMenu() {
     btnMenu.classList.toggle('activo');
     navMenu.classList.toggle('abierto');
 
-    // Bloquea o desbloquea el scroll del fondo (la página web)
     if (navMenu.classList.contains('abierto')) {
         document.body.style.overflow = 'hidden';
     } else {
@@ -220,18 +218,14 @@ function toggleMenu() {
     }
 }
 
-// 1. Abrir/Cerrar desde el botón hamburguesa
 btnMenu.addEventListener('click', toggleMenu);
 
-// 2. Cerrar al hacer clic en la capa oscura (fuera del menú blanco)
 navMenu.addEventListener('click', (e) => {
-    // Si el usuario hizo clic exactamente en el <nav> (el fondo oscuro) y no en sus hijos
     if (e.target === navMenu) {
         toggleMenu();
     }
 });
 
-// 3. Cerrar automáticamente al hacer clic en cualquier enlace del menú
 menuLinks.forEach(link => {
     link.addEventListener('click', toggleMenu);
 });

@@ -242,7 +242,7 @@ p {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        gap: clamp(30px, 6vw, 80px);
+        gap: clamp(50px, 6vw, 80px);
 
         .hero-text {
             display: flex;
@@ -278,7 +278,6 @@ p {
                 font-size: var(--fs-body);
                 color: var(--color-terciario);
                 max-width: 500px;
-                line-height: 1.5;
 
                 .fw-text {
                     font-weight: 600;
@@ -322,7 +321,7 @@ p {
 
 .hero-paragraph,
 .btn-cta {
-    margin-top: clamp(1rem, 3vw, 2rem);
+    margin-top: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .hero-image figure::before {
@@ -363,6 +362,7 @@ p {
     transition: all 0.3s ease;
     text-decoration: none;
     box-shadow: 7px 7px var(--color-secundario);
+    z-index: 1;
 
     ion-icon {
         font-size: 1.375rem;
@@ -398,8 +398,8 @@ p {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
+    gap: clamp(30px, 5vw, 40px);
+    margin-top: clamp(25px, 4vw, 50px);
 }
 
 .service-card {
@@ -700,6 +700,7 @@ p {
             border-left: 3px solid var(--color-principal);
             padding-left: 10px;
             font-weight: 600;
+            margin-bottom: clamp(5px, 1vw, 10px);
         }
 
         h2 {
@@ -708,12 +709,11 @@ p {
             -webkit-text-stroke: 1px var(--color-secundario);
             text-shadow: 2px 2px var(--color-acento);
             position: relative;
-            margin-bottom: 10px;
+            margin-bottom: clamp(15px, 3vw, 25px);
         }
 
         p {
             color: var(--color-terciario);
-            line-height: 1.5;
         }
     }
 }
@@ -1097,7 +1097,7 @@ p {
 .container-footer {
     display: flex;
     width: 100%;
-    padding: clamp(0.938rem, 2vw, 1.25rem) 2.5rem;
+    padding: clamp(0.938rem, 2vw, 1.25rem) 2rem;
     align-items: center;
     justify-content: space-between;
 
@@ -1116,6 +1116,12 @@ p {
     flex-direction: column;
     align-items: flex-end;
     gap: 12px;
+    pointer-events: none;
+}
+
+.wa-floating-container a,
+.wa-floating-container button {
+    pointer-events: auto;
 }
 
 .wa-floating-btn {
@@ -1341,10 +1347,14 @@ p {
     .grid-mansonry {
         grid-template-columns: 1fr;
         grid-template-rows: none;
-        grid-auto-rows: 250px;
+        grid-auto-rows: 380px;
     }
 
     .container-social {
         grid-template-columns: 1fr;
+    }
+
+    .container-footer {
+        flex-direction: column;
     }
 }
